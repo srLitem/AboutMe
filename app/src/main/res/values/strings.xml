@@ -2,4 +2,17 @@
     <string name="app_name">AboutMe</string>
     <string name="name">SrLitem</string>
     <string name="ugly_yellow_star">Ugly_yellow_star</string>
+    <string name="bio">
+        Hi there, my name is Santiago
+        \n
+        \nI am really excited to learn about mobile development.
+        \nTo prove this, I will post a really nice part from the script of a movie I love, Ratatouille:
+    </string>
+    <string name="ratatouille">
+        For Chef Gusteau\'s famous motto, \"Anyone can cook.\"
+        \nBut I realize only now do I truly understand what he meant.
+        \nNot everyone can become a great artist,but a great artist can come from anywhere...
+    </string>
+    <string name="type_your_name">Type your name</string>
+    <string name="done">Done</string>
 </resources>
