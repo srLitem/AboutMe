@@ -11,11 +11,14 @@ import androidx.databinding.DataBindingUtil
 class MainActivity : AppCompatActivity() {
     // Instantiation of the binding variable
     private lateinit var binding: MainActivityBinding
+    private val myName: MyName = MyName("SrLitem")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         // Creation of the binding object and association of the layout with the current activity
         binding = DataBindingUtil.setContentView(this, R.layout.main_activity)
+        // Assigning the data name
+        binding.myName = myName
         // Adding listener to the "Done" button
         binding.doneButton.setOnClickListener{
             addNickname(it)
@@ -26,7 +29,8 @@ class MainActivity : AppCompatActivity() {
         // Show the typed text
         // Kotlinizing the function
         binding.apply {
-            nicknameText.text = nicknameEdit.text.toString()
+            myName?.nickname = nicknameEdit.text.toString()
+            invalidateAll() //! Refreshes the UI with the new data by invalidating the current binding expressions
             nicknameEdit.visibility = View.GONE
             doneButton.visibility = View.GONE
             nicknameText.visibility = View.VISIBLE
